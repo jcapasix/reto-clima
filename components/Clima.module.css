@@ -1,0 +1,163 @@
+.contenedor {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(79, 172, 254, 0.3);
+  border: 1px solid rgba(79, 172, 254, 0.2);
+  max-width: 500px;
+  width: 100%;
+}
+
+.titulo {
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.buscador {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.entrada {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid rgba(79, 172, 254, 0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  color: #2d3748;
+}
+
+.entrada:focus {
+  outline: none;
+  border-color: #4facfe;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.15);
+}
+
+.boton {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+}
+
+.boton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.5);
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+}
+
+.boton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.boton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.mensajeError {
+  background: linear-gradient(135deg, rgba(255, 107, 157, 0.15) 0%, rgba(255, 182, 193, 0.15) 100%);
+  color: #d63031;
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border-left: 4px solid #ff6b9d;
+  box-shadow: 0 2px 8px rgba(255, 107, 157, 0.2);
+  font-weight: 500;
+  border: 1px solid rgba(255, 107, 157, 0.3);
+}
+
+.tarjetaClima {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #89cff0 100%);
+  color: white;
+  padding: 32px;
+  border-radius: 20px;
+  margin-top: 24px;
+  box-shadow: 0 8px 32px rgba(79, 172, 254, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.tarjetaClima::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(10px, 10px) rotate(180deg); }
+}
+
+.nombreCiudad {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.infoClima {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.itemInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.2s ease;
+}
+
+.itemInfo:hover {
+  padding-left: 8px;
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+}
+
+.itemInfo:last-child {
+  border-bottom: none;
+}
+
+.etiqueta {
+  font-size: 1.05rem;
+  opacity: 0.95;
+  font-weight: 500;
+}
+
+.valor {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
