@@ -79,3 +79,7 @@ npm run test:watch
 ```bash
 npm run test:coverage
 ```
+
+### Imagen demo:
+<img width="959" height="619" alt="Screenshot 2025-11-18 at 2 03 47 PM" src="https://github.com/user-attachments/assets/ca34f14a-7ede-4de0-bbfd-1256bb9ac867" />
+
